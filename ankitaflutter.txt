@@ -1,0 +1,76 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+        home: Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text(
+          'Portfolio',
+          style: TextStyle(color: Colors.black, fontSize: 30),
+        ),
+        backgroundColor: Colors.orange[300],
+      ),
+      body: Scrollbar(
+          child: ListView(
+        children: [
+          Container(
+              margin: EdgeInsets.all(20),
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(
+                  color: Colors.orange,
+                  width: 10,
+                ),
+              ),
+
+              //here we have our image
+              child: Image(alignment: Alignment.center, image: AssetImage('images/need.jpg'), height: 300, width: 300)),
+
+          //this will hold all the text
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 15.0),
+              child: Text(
+                '> Ankita Bhangalia <',
+                style: TextStyle(
+                  color: Colors.orange.shade400,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30,
+                ),
+              ),
+            ),
+          ),
+          Container(
+              padding: EdgeInsets.only(left: 15, bottom: 20),
+              child: Text("Information: ",
+                  style: TextStyle(
+                    backgroundColor: Colors.orange[300],
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                  ))),
+          Container(
+              padding: EdgeInsets.all(15),
+              child: Text("Hii\nMyself Ankita. Currently I'm Persuing B.Sc. (H) Computer Science from Mata Sundari College for Women's , University of Delhi. Basically I'm from Kangra , Himachal Pradesh. I have done my schooling from Binwa Public Sr. Sec. School Baijnath, Kangra, H.P.(176125).\nI'm from Computer Science background but i didn't learn any programing language in my 11th and 12th class. \nBut I have a interest in coding . I like programing and coding that's why I opted Computer Science as my graduation course.\nBy learning Programing language day by day I'm trying to improve my programming skills to next level.\n",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontStyle: FontStyle.italic,
+                  ))),
+          Container(
+              padding: EdgeInsets.only(left: 15, bottom: 20),
+              child: Text("My Skills:",
+                  style: TextStyle(
+                    backgroundColor: Colors.orange[300],
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                  ))),
+          Container(
+              padding: EdgeInsets.all(15),
+              child: Text("->C++ programming language\n->Python->\nCurrently studying Java programing language",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontStyle: FontStyle.italic,
+                  ))),
+        ],
+      )),
+    )));
